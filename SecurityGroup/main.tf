@@ -1,7 +1,7 @@
 
-resource "aws_vpc" "default" {
+data "aws_vpc" "default" {
     default = true
-    
+
 }
 
 resource "aws_security_group" "nautilus-sg" {
