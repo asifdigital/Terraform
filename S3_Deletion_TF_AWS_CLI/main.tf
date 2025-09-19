@@ -15,5 +15,5 @@ resource "null_resource" "delete_s3_bucket" {
     provisioner "local-exec" {
         command = "aws s3 rb s3://nautilus-bck-2124 --force"
     }
-    depends_on = [aws_s3_object_copy.nautilus-bck-2124_copy]
+    depends_on = [null_resource.copy_from_s3]
 }   
